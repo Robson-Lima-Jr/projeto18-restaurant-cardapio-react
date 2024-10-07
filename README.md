@@ -1,4 +1,4 @@
-# projeto17-agencia-react
+# projeto18-Restaurant(cardápio)-react
 
 Projeto [DevMedia](https://www.devmedia.com.br/) 
 
