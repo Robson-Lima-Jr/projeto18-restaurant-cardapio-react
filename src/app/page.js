@@ -4,12 +4,17 @@ import styles from "./page.module.css";
 import Topo from "./components/Topo";
 import AreaBotoes from "./components/AreaBotoes";
 
+
 export default function Home() {
   return (
     <div>
       <Topo />
       
-      <AreaBotoes />
+      <main className={styles.container_base}>
+        <AreaBotoes />
+
+
+      </main>
 
       
     </div>
