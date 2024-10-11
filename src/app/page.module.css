@@ -1,11 +1,39 @@
+/* Geral */
+
 .container_base {
     width: 100%;
     max-width: 1024px;
     margin: 0px auto;
-    padding: 50px 20px;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+
+/* Area de busca */
+
+.container_busca {
+    width: 100%;
+    max-width: 1024px;
+    padding: 7px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid rgb(201, 196, 196);
+    border-radius: 20px;
+}
+
+.lupa_img {
+    width: 20px;
+    height: auto;
+}
+
+.input_busca {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
 }
