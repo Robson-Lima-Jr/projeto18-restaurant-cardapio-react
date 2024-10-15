@@ -12,8 +12,16 @@
     gap: 30px;
 }
 
-/* Area de busca */
+/* area dos botoes */
+.container_botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
 
+/* Area de busca */
 .container_busca {
     width: 100%;
     padding: 7px 10px;

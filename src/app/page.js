@@ -18,9 +18,8 @@ import BebidasIcone from "/public/bebidas.png";
 import SaladasIcone from "/public/salada.png";
 import SobremesaIcone from "/public/sobremesa.png";
 
-
 // Importação de dados
-import { produtos } from "./data/dados.js";
+
 
 export default function Home() {
   return (
@@ -28,11 +27,38 @@ export default function Home() {
       <Topo />
 
       <main className={styles.container_base}>
-        <AreaBotoes 
-          nome={"Entrada"}
-          icone_botao={EntradaIcone}
-          // onClick={() => filtroCategorias("Entradas")}
-        />
+        <section className={styles.container_botoes}>
+          <AreaBotoes
+            nome={"Entrada"}
+            icone_botao={EntradaIcone}
+          // onClick={() => filtroCategorias("")}
+          />
+          <AreaBotoes
+            nome={"Massas"}
+            icone_botao={MassaIcone}
+          // onClick={() => filtroCategorias("")}
+          />
+          <AreaBotoes
+            nome={"Carnes"}
+            icone_botao={CarnesIcone}
+          // onClick={() => filtroCategorias("")}
+          />
+          <AreaBotoes
+            nome={"Bebidas"}
+            icone_botao={BebidasIcone}
+          // onClick={() => filtroCategorias("")}
+          />
+          <AreaBotoes
+            nome={"Saladas"}
+            icone_botao={SaladasIcone}
+          // onClick={() => filtroCategorias("")}
+          />
+          <AreaBotoes
+            nome={"Sobremesas"}
+            icone_botao={SobremesaIcone}
+          // onClick={() => filtroCategorias("")}
+          />
+        </section>
 
         <div className={styles.container_busca}>
           <Image src={Lupa} alt="Lupa" className={styles.lupa_img}></Image>
