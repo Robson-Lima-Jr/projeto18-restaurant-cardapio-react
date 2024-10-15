@@ -29,7 +29,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .container_topo h1 {
+        font-size: 40px;
+    }
+
     .container_topo p {
+        font-size: 28px;
         width: 100%;
     }
     
