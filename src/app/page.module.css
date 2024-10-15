@@ -71,6 +71,49 @@
     border-radius: 10px;
 }
 
+/* Rodape */
+.creditos {
+    width: 100%;
+    max-width: 1024px;
+    padding: 10px 20px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.qr_image {
+    width: 200px;
+    height: 200px;
+}
+
+.links{
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#link_curso {
+    background-color: green;
+    color: var(--corCinzaClaro);
+}
+
+#link_curso:hover {
+    background-color: rgb(6, 85, 6);
+}
+
+#link_nome {
+    background-color: var(--corDourada);
+    color: var(--corCinzaClaro);
+}
+
+#link_nome:hover {
+    background-color: rgb(160, 139, 17);
+}
+
 /* media-query */
 
 @media screen and (max-width: 1024px) {
