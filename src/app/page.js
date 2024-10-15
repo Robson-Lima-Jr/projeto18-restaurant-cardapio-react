@@ -19,13 +19,23 @@ import SaladasIcone from "/public/salada.png";
 import SobremesaIcone from "/public/sobremesa.png";
 
 // Importação de dados
-import { filtroDados } from "./services";
+import { filtroDados, buscaDados } from "./services";
 
 export default function Home() {
+  // variaveis de controle useState
   const [tipoPrato, setTipoPrato] = useState(filtroDados("Entradas"));
+  const [textoDigitado, setTextoDigitado] = useState("");
 
+  // função para botao de filtro e reset do campo de busca
   const handleFiltroDados = (categoria) => {
     setTipoPrato(filtroDados(categoria));
+    setTextoDigitado("");
+  }
+
+  // função para o campo de busca
+  const handleBuscaDados = (texto) => {
+    setTextoDigitado(texto);
+    setTipoPrato(buscaDados(texto))
   }
 
   return (
@@ -79,6 +89,8 @@ export default function Home() {
             type="text"
             name="busca"
             id="idBusca"
+            value={textoDigitado}
+            onChange={(evento) => handleBuscaDados(evento.target.value)}
             placeholder="Pesquise aqui um dos pratos do nosso cardápio..."
           />
         </div>
