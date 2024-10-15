@@ -1,5 +1,7 @@
+"use client";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useState } from "react";
 
 
 // Importação Componentes
@@ -9,6 +11,13 @@ import Card from "./components/Card";
 
 // Importação imagens
 import Lupa from "/public/lupa.png";
+import EntradaIcone from "/public/entrada.png";
+import MassaIcone from "/public/massa.png";
+import CarnesIcone from "/public/carne.png";
+import BebidasIcone from "/public/bebidas.png";
+import SaladasIcone from "/public/salada.png";
+import SobremesaIcone from "/public/sobremesa.png";
+
 
 // Importação de dados
 import { produtos } from "./data/dados.js";
@@ -19,7 +28,11 @@ export default function Home() {
       <Topo />
 
       <main className={styles.container_base}>
-        <AreaBotoes />
+        <AreaBotoes 
+          nome={"Entrada"}
+          icone_botao={EntradaIcone}
+          // onClick={() => filtroCategorias("Entradas")}
+        />
 
         <div className={styles.container_busca}>
           <Image src={Lupa} alt="Lupa" className={styles.lupa_img}></Image>
@@ -28,7 +41,7 @@ export default function Home() {
             className={styles.input_busca}
             type="text"
             name="busca"
-            id="idBuca"
+            id="idBusca"
             placeholder="Pesquise aqui um dos pratos do nosso cardápio..."
           />
         </div>
