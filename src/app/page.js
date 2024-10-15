@@ -19,9 +19,11 @@ import SaladasIcone from "/public/salada.png";
 import SobremesaIcone from "/public/sobremesa.png";
 
 // Importação de dados
-
+import { filtroDados } from "./services";
 
 export default function Home() {
+  const [tipoPrato, setTipoPrato] = useState(filtroDados("Entradas"));
+
   return (
     <div>
       <Topo />
@@ -31,32 +33,32 @@ export default function Home() {
           <AreaBotoes
             nome={"Entrada"}
             icone_botao={EntradaIcone}
-          // onClick={() => filtroCategorias("")}
+            onClick={() => filtroCategorias("Entradas")}
           />
           <AreaBotoes
             nome={"Massas"}
             icone_botao={MassaIcone}
-          // onClick={() => filtroCategorias("")}
+          
           />
           <AreaBotoes
             nome={"Carnes"}
             icone_botao={CarnesIcone}
-          // onClick={() => filtroCategorias("")}
+          
           />
           <AreaBotoes
             nome={"Bebidas"}
             icone_botao={BebidasIcone}
-          // onClick={() => filtroCategorias("")}
+          
           />
           <AreaBotoes
             nome={"Saladas"}
             icone_botao={SaladasIcone}
-          // onClick={() => filtroCategorias("")}
+          
           />
           <AreaBotoes
             nome={"Sobremesas"}
             icone_botao={SobremesaIcone}
-          // onClick={() => filtroCategorias("")}
+          
           />
         </section>
 
@@ -76,7 +78,7 @@ export default function Home() {
           <h2>Cardápio</h2>
 
           <div className={styles.cards_area}>
-            {produtos.map((produtos) => (
+            {tipoPrato.map((produtos) => (
               <Card
                 key={produtos.id}
                 imagem={produtos.imagem}
@@ -90,8 +92,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-
     </div>
   );
 }

@@ -3,10 +3,38 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border: 2px solid var(--corDourada);
+    border-radius: 8px;
 }
 
 .img_config {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.card_texto {
+    min-height: 150px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.card_texto h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card_texto small {
+    color: var(--corDourada);
+    font-weight: bold;
+}
+
+.card_texto span {
+    align-self: self-end;
+    font-weight: bold;
 }

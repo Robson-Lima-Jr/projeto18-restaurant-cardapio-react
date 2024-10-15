@@ -6,13 +6,15 @@ export default function Card({nome, categoria, preco, descricao, imagem}) {
         <div className={styles.card_config}>
             <Image src={imagem} alt={"Imagem de: " + nome} className={styles.img_config}></Image>
 
-            <h3>{nome}</h3>
+            <div className={styles.card_texto}>
+                <h3>{nome}</h3>
 
-            <small>{categoria}</small>
+                <small>{categoria}</small>
+                
+                <p>{descricao}</p>
 
-            <p>{descricao}</p>
-
-            <span>{preco}</span>
+                <span>R$ {preco}</span>
+            </div>
         </div>
     );
 }
