@@ -24,6 +24,10 @@ import { filtroDados } from "./services";
 export default function Home() {
   const [tipoPrato, setTipoPrato] = useState(filtroDados("Entradas"));
 
+  const handleFiltroDados = (categoria) => {
+    setTipoPrato(filtroDados(categoria));
+  }
+
   return (
     <div>
       <Topo />
@@ -33,32 +37,37 @@ export default function Home() {
           <AreaBotoes
             nome={"Entrada"}
             icone_botao={EntradaIcone}
-            onClick={() => filtroCategorias("Entradas")}
+            onClick={() => handleFiltroDados("Entradas")}
           />
+
           <AreaBotoes
             nome={"Massas"}
             icone_botao={MassaIcone}
-          
+            onClick={() => handleFiltroDados("Massas")}
           />
+
           <AreaBotoes
             nome={"Carnes"}
             icone_botao={CarnesIcone}
-          
+            onClick={() => handleFiltroDados("Carnes")}
           />
+
           <AreaBotoes
             nome={"Bebidas"}
             icone_botao={BebidasIcone}
-          
+            onClick={() => handleFiltroDados("Bebidas")}
           />
+
           <AreaBotoes
             nome={"Saladas"}
             icone_botao={SaladasIcone}
-          
+            onClick={() => handleFiltroDados("Saladas")}
           />
+
           <AreaBotoes
             nome={"Sobremesas"}
             icone_botao={SobremesaIcone}
-          
+            onClick={() => handleFiltroDados("Sobremesas")}
           />
         </section>
 

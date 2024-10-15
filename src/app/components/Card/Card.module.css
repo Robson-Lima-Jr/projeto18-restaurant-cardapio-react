@@ -2,7 +2,6 @@
     flex: 1 1 250px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     border: 2px solid var(--corDourada);
     border-radius: 8px;
 }
@@ -17,10 +16,11 @@
 }
 
 .card_texto {
-    min-height: 150px;
-    padding: 10px;
+    position: relative;
+    height: 200px;
+    padding: 5px 10px;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-direction: column;
 }
 
@@ -29,12 +29,18 @@
     font-weight: 600;
 }
 
+.card_texto p {
+    font-size: 15px;
+}
+
 .card_texto small {
     color: var(--corDourada);
     font-weight: bold;
 }
 
 .card_texto span {
-    align-self: self-end;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
     font-weight: bold;
 }
