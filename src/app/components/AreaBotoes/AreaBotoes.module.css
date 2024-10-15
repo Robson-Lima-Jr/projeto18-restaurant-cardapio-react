@@ -1,0 +1,22 @@
+.btn_config {
+    width: 150px;
+    padding: 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.btn_config:focus {
+    background-color: var(--corDourada);
+}
+
+.icone_config {
+    width: 20px;
+    height: auto;
+}
